@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8" />
+    <title>Markdownでお手軽プレゼン</title>
+
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
+    <link href="css/impress.css" rel="stylesheet" />
+</head>
+<body>
+<div id="impress" class="impress-not-supported">
+    <div class="fallback-message">
+        <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+        <p>For the best experience please use the latest <b>Chrome</b> or <b>Safari</b> browser. Firefox 10 (to be released soon) will also handle it.</p>
+    </div>
+
+<div class="step" data-x="0" data-y="0">
+<h1 id="markdown">Markdownでお手軽プレゼン</h1>
+
+<ul>
+  <li><a href="http://twitter.com/erukiti">@erukiti</a></li>
+  <li><a href="http://erukiti.hatenablog.com/">Hatena blog</a></li>
+  <li><a href="http://github.com/erukiti/">Github</a></li>
+  <li>などなど。たいていのIDは erukiti</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="1424" data-y="0">
+<h2 id="markdown-1">Markdownは必須</h2>
+
+<p>現代ウェブエンジニアにとって必須ですよね</p>
+
+<ul>
+  <li>Github/Github enterprise</li>
+  <li>Hatena blog (Markdownモード)</li>
+  <li>Redmine markdown プラグイン</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="2848" data-y="0">
+<h2 id="markdown-2">Markdownは簡単</h2>
+
+<p>簡単な記法で書けます</p>
+
+<pre><code>へっだー1
+=========
+
+へっだー2
+---------
+
+&gt; 引用
+
+- リスト
+</code></pre>
+
+
+</div>
+<div class="step" data-x="4272" data-y="0">
+<h2 id="markdown-3">Markdownで幸せに</h2>
+
+<ul>
+  <li>ソースコードと一緒にリポジトリに入れられる</li>
+  <li>Microsoft Officeを使わなくても済む</li>
+  <li>プログラムで生成・加工などが簡単にできる</li>
+</ul>
+
+<p><strong>幸せになりましょう</strong></p>
+
+
+</div>
+<div class="step" data-x="5696" data-y="0">
+<h2 id="section">プレゼンでも使おう</h2>
+
+<p>手間を掛けずに簡単プレゼン</p>
+
+<ul>
+  <li>markdown2impress</li>
+  <li>mdslide</li>
+  <li>presentation_down(仮)</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="7120" data-y="0">
+<h2 id="markdown2impress">markdown2impress</h2>
+
+<ul>
+  <li>Perlで書かれた変換ツール</li>
+  <li>impress.js を使う</li>
+  <li>ページ区切りは&lt;h1&gt;&lt;h2&gt;</li>
+</ul>
+
+<pre><code>  $ sudo cpan Data/Section/Simple.pm
+  $ sudo cpan Text/Markdown.pm
+  $ sudo cpan Text/Xslate.pm
+  $ git clone git://github.com/yoshiki/markdown2impress.git
+  $ cd markdown2impress
+  $ bin/markdown2impress.pl README.md
+</code></pre>
+
+
+</div>
+<div class="step" data-x="8544" data-y="0">
+<h2 id="mdslide">mdslide</h2>
+
+<ul>
+  <li>Rubyで書かれた変換ツール</li>
+  <li>サーバー機能付き</li>
+  <li>jQuery, slide.js を使う</li>
+  <li>ページ区切りが // 区切り</li>
+</ul>
+
+<pre><code>  $ gem install mdslide
+  $ mdslide -i README.md -s
+</code></pre>
+
+
+</div>
+<div class="step" data-x="9968" data-y="0">
+<h2 id="presentationdown">presentation_down(仮)</h2>
+
+<ul>
+  <li>謹製</li>
+  <li>Rubyで書かれた変換ツール</li>
+  <li>markdown2impressのパクり</li>
+  <li>impress.js を使う</li>
+  <li>ページ区切りは&lt;h1&gt;&lt;h2&gt;</li>
+  <li>サーバー機能組み込み(予定)</li>
+</ul>
+
+</div>
+
+
+</div>
+
+<div class="hint">
+    <p>Use a spacebar or arrow keys to navigate</p>
+</div>
+<script>
+if ("ontouchstart" in document.documentElement) { 
+    document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
+}
+</script>
+
+
+<script src="js/impress.js"></script>
+<script>impress().init();</script>
+
+</body>
+</html>
